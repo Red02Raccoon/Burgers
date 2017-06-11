@@ -1,0 +1,96 @@
+/* общие стили сброс */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html, body, ul {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: UbuntuLight;
+	font-size: 16px;
+    line-height: 1.42;
+	color: #2f3234;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*главные цвета сайта*/
+
+$orangeText: #f9b43b;
+$whiteText: #ffffff;
+$grayText: #2f3234;
+$yellowText: #f9d1a9;
+$orangeButton: #e45028;
+$orangeButtonHover: #c1401e;
+
+
+/* общие стили элементы страницы*/
+.button {
+    display: inline-block;
+    vertical-align: top;
+    background: $orangeButton;
+    color: $whiteText;
+    font-family: UbuntuMedium;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    @include br(5px);
+    padding: 10px 15px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: $orangeButtonHover;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    min-width: 960px;
+	height: 100%; 
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+    @extend %clearfix;
+}
+
+.maincontent {
+    height: 100%;
+    min-height: 650px; /* это для нормальной работы OPS - привет от Владимира */
+    transition: 1s;
+    will-change: transform;
+/*     transform: translateZ(0); для старых браузеров вместо will-change - чтобы не было скачков при анимации*/
+}
+
+.section {
+    height: 100%;
+    height: 100vh;
+    min-height: 650px;
+}

@@ -1,0 +1,160 @@
+/*____________________________1-я секция_____________________________*/
+.section-main {
+    @include bg("../images/background/main_bg.jpg");
+    position: relative;
+}
+
+.head {
+	@extend %clearfix;
+	padding-top: 12px;
+	height: 90px;
+}
+
+.section-main .container {
+    position: static;
+}
+
+.section-main__content {
+	margin-top: -20px;
+}
+
+.head__logo {
+	float: left;
+	width: 24%;
+}
+
+.head__menu {
+	@extend %clearfix;
+    float: right;
+    width: 68%;
+    padding-top: 16px;
+}
+
+.menu {
+	@extend %clearfix;
+    display: inline-block;
+	width: 83%;
+    vertical-align: middle;
+}
+
+.menu__list {
+	width: 100%;
+	@extend %clearfix;
+}
+
+.menu__item {
+    display: block;
+	float: left;
+	white-space: nowrap;
+    margin-right: 15px;
+}
+
+.menu__item:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    @include br(50%);
+    background: $whiteText;
+    margin-left: 15px;
+}
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__item:last-child:after {
+	display: none;
+}
+
+.menu__link {
+	display: inline-block;
+    vertical-align: middle;
+    font-family: UbuntuMedium;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $whiteText;
+    text-decoration: none;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+.order {
+	width: 95px;
+    padding: 10px 0;
+    margin-left: 9px;
+    vertical-align: middle;
+}
+.section-main__left {
+    float: left;
+    width: 50%;
+}
+
+.section-main__right {
+	float: right;
+    width: 50%;
+    padding-top: 120px;
+}
+
+.section-main__content {
+    @extend %clearfix;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.section__title {
+    color: $orangeText;
+    font-family: GagalinRegular;
+    font-size: 72px;
+    margin-bottom: 12px;
+}
+
+.section-main__text {
+    font-family: LifehackMedium;
+    font-size: 65px;
+    color: $whiteText;
+    text-transform: lowercase;
+    line-height: 1em;
+}
+
+
+/* стрелка первой секции */
+.arrow {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -15px;
+    transition: .3s;
+}
+
+.arrow__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow__icon-pic {
+    width: 23px;
+    height: 23px;
+    transition: .3s;
+    position: relative;
+    top: 0;
+}
+
+.arrow:hover .arrow__icon-pic {
+    top: -15px;
+    width: 35px;
+    height: 35px;
+}
+
+

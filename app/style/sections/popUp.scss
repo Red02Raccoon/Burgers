@@ -1,0 +1,40 @@
+.popUp, .popUp__mail-success, .popUp__mail-error {
+	display: none;
+	width: 470px;
+	height: auto;
+	background: $whiteText;
+	@include br(5px);
+	padding: 25px;
+	position: relative;
+}
+
+.popUp__content, .popUp__mail-content {
+	font-family: Gagalin;
+	color: #2f3234;
+	font-size: 14px;
+}
+
+.popUp__title, .popUp__mail-title {
+	margin-bottom: 25px;
+	text-transform: uppercase;
+}
+
+.popUp__mail-title {
+	text-align: center;
+	margin: 0 auto;	
+	font-size: 25px;
+}
+
+.popUp__text {
+	font-family: Ubuntulight;
+	line-height: 24px;
+}
+
+.popUp__close, .popUp__mail-close {
+	width: 17px;
+	height: 17px;
+	position: absolute;
+	right: 25px;
+	top: 25px;
+	@include bg("../images/icons/close.svg");
+}

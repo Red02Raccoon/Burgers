@@ -1,0 +1,100 @@
+/* _________________________4-я секция____________________________ */
+.section-team {
+    @include bg("../images/background/team_bg.jpg");
+    position: relative;	
+}
+
+.section-team__content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding: 5% 2% 0% 7%;
+    background: rgba(47, 50, 52, 0.93);
+}
+
+.teamDown {
+    padding-left: 17px;
+}
+
+.teamDown__item {
+    margin-bottom: 40px;
+}
+
+.teamDown__trigger {
+	position: relative;
+    display: block;
+    font-size: 14px;
+    font-family: GagalinRegular;
+    color: $whiteText;
+    text-decoration: none;
+}
+
+.teamDown__trigger:before {
+    border-top: 7px solid #f9b43b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 0px solid transparent;
+    transform: rotate(0deg);
+    transition: .3s;
+}
+
+.teamDown__trigger:before,
+ .teamDown__trigger:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -18px;
+    top: 8px;
+}
+
+.teamDown__content {
+    padding-top: 14px;
+    @extend %clearfix;
+    display: none; 
+}
+
+.teamDown__image {
+    float: left;
+    width: 25%;
+}
+
+.teamDown__img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include br(50%);
+    margin-right: 20px;
+}
+
+.teamDown__text {
+    float: left;
+    width: 55%;
+    color: $whiteText;
+    font-family: UbuntuLight;
+    font-size: 14px;
+}
+
+.teamDown__title {
+    margin-bottom: 20px;
+    font-family: UbuntuBold;
+}
+
+.teamDown__item.visit .teamDown__trigger {
+    color: $orangeText; 
+}
+
+.teamDown__item.visit .teamDown__trigger:before {
+    transform: rotate(-180deg);
+}
+

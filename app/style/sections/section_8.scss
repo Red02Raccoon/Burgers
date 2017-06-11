@@ -1,0 +1,59 @@
+/* ____________8-я секция______________________ */
+.yandex-map {
+    height: calc(100% - 60px);
+}
+
+.footer {
+	@include bg("../images/background/footer_bg.jpg");
+    height: 60px;
+}
+
+.footer__left {
+	float: left;
+	width: 50%;
+	margin-top: 10px;
+}
+
+.footer__right {
+	float: right;
+	margin-top: 20px;
+	width: 50%;
+}
+
+
+.footer__address {
+	font-size: 14px;
+	color: $whiteText;
+}
+
+.footer__phone {
+	font-family: UbuntuBold;
+	font-size: 14px;
+	color: $orangeButton;
+}
+
+.soc {
+	@extend %clearfix;
+	float: right;
+}
+
+.soc__item {
+	float: left;
+	margin-left: 20px;
+}
+
+.soc__text {
+	display: none;
+}
+
+.soc__icon {
+	display: block;
+	width: 22px;
+	height: 22px;
+	opacity: 0.3;
+	transition: opacity 0.5s;
+}
+
+.soc__link:hover .soc__icon {
+	opacity: 1;
+}

@@ -1,0 +1,78 @@
+/*_______________________2-я секция_______________________________ */
+.section-we {
+    @include bg("../images/background/we_bg.jpg");
+    position: relative;
+}
+
+.section-we__content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.section__title.section__title--black {
+	margin-bottom: 40px;
+}
+
+
+.section-we__item {
+	display: inline-block;
+	width: 33%;
+	margin: 0 auto;
+    vertical-align: top;
+    padding: 0 10px
+
+}
+
+.section-we__title, .section-we__text {
+	text-align: center;
+}
+
+.section__title--black {
+	color: $grayText;
+	text-align: center;
+}
+
+.section-we__text {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.section-we__img {
+	height: 90px;
+	margin-bottom: 30px;
+}
+
+.section-we__pic {
+	background-image:url('../images/icons.svg');
+	margin: 0 auto;
+    width: 100px;
+}
+
+.section-we__title {
+    font-family: LifehackMedium;
+	font-size: 24px;
+    color: $grayText;
+    margin-bottom: 20px;
+}
+
+.img-meat {
+	background-position: 0 -607px;
+	background-repeat: no-repeat;
+	width: 96px;
+	height:89px;
+}
+
+.img-hand {
+	background-position:0 -366px;
+	background-repeat:no-repeat;
+	width:73px;
+	height:86px
+}
+
+.img-leaf {
+	background-position:0 -696px;
+	background-repeat:no-repeat;
+	width:88px;
+	height:76px;
+}

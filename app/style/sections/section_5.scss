@@ -1,0 +1,72 @@
+/* _________________5-я секция ____________________________________*/
+.section-menu {
+    @include bg("../images/background/menu_bg.jpg");
+    position: relative; 
+}
+
+.menu-title {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+
+.menu-accor {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-accor__item {
+    float: left;
+    height: 100%;
+}
+
+.menu-accor__item.active .menu-acco__trigger-desc {
+    color: $orangeText;
+}
+
+.menu-accor__trigger {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 80px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.menu-acco__trigger-desc {
+    position: absolute;
+    top: 50%;
+    left: -275px;
+    width: 650px;
+    height: 80px;
+    margin-top: -40px;
+    font-size: 40px;
+    color: $whiteText;
+    font-family: GagalinRegular;
+    transform: rotate(-90deg);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.menu-accor__content {
+    width: 0; /*  скрываем блок */
+    height: 100%;
+    float: left;
+    background: rgba(47, 50, 52, 0.93);
+    overflow: hidden; /*  обрезаем текст при выходе за блок */
+    transition: 0.7s; /*  для работы с jquery */
+}
+
+.menu-accor__desc {
+    padding: 60px 30px;
+    width: 550px;
+    font-family: UbuntuLight;
+    font-size: 14px;
+    color: $whiteText;
+    line-height: 1.8;
+}

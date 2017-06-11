@@ -1,0 +1,186 @@
+/* _________________7-я секция (форма) ____________________________________*/
+
+.form {
+    @include bg("../images/background/form_bg.jpg");
+    position: relative;
+}
+
+.form .section__title {
+	text-align: center;
+}
+
+.form__content {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form__mainform {
+    @extend %clearfix;
+}
+
+.form__col {
+    float: left;
+    width: 45%;
+    margin-left: 40px;
+}
+
+.form__box {
+    display: block;
+}
+
+.form__row--double .form__box {
+    float: left;
+    width: calc(100% / 2 - 20px);
+    margin-left: 20px;
+}
+
+.form__row--double, .form__row--quatro {
+    margin-left: -20px; 
+}
+
+.form__row {
+    @extend %clearfix;
+    margin-bottom: 15px;
+}
+
+.form__label {
+    margin-bottom: 17px;
+    font-size: 14px;
+    font-family: UbuntuLight;
+    color: $whiteText;
+}
+
+.form__input {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #d1cfcb;
+    @include br(5px);
+    width: 100%;
+    outline: none;
+}
+
+[type="text"]:focus, .form__input--textarea:focus {
+	border: 2px solid $orangeText;
+	padding: 4px 9px;
+}
+
+.form__input--textarea {
+ 	resize: vertical; 
+}
+
+.form__row--quatro .form__box {
+    float: left;
+    margin-left: 20px;
+    width: calc(100% / 4 - 20px);
+}
+
+.form__input--textarea {
+    height: 110px;
+}
+
+
+.form__radio {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.form__radio-elem {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+
+.form__radio-fake {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    @include br(50%);
+    background: $whiteText;
+    vertical-align: middle;
+    position: relative;
+}
+
+.form__radio-fake--checkbox {
+    @include br(0);
+}
+
+
+
+
+.form__radio-fake:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $orangeButton;
+    @include br(50%);
+    transform: translate(50%, 50%);
+    opacity: 0;
+    transition: all 0.5s;
+} 
+
+.form__radio-fake--checkbox:after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    @include br(0);
+    background: url("../images/icons/check.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(25%, 25%);
+    transition: all 0.5s;
+}
+
+.form__radio-elem:checked + .form__radio-fake--checkbox:after {
+    opacity: 1;
+}
+
+.form__radio-elem:checked + .form__radio-fake:after {
+    opacity: 1;
+}
+
+
+.form__radio-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    color: $whiteText;
+    margin-left: 10px;
+}
+
+.form__button {
+    vertical-align: middle;
+    margin-right: 20px;
+    border: 0;
+    background: $orangeButton;
+    outline: none;
+}
+
+.form__button--reset {
+    text-transform: none;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    color: $whiteText;
+    font-family: UbuntuMedium;
+}
+
+.error {
+  background-color: #c19f9e;
+  border-color: red;
+}
+
+.qtip-mystyle {
+  color: white;
+  font-size: 11px;
+  font-family: UbuntuLight;
+  background-color: #c16862;
+  border-color: #bf4038;
+}
+

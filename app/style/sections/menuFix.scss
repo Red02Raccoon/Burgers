@@ -1,0 +1,43 @@
+/*menu-fix*/
+
+.menu-fix {
+    position: fixed;
+    top: 90px;
+    right: 40px;
+}
+
+.menu-fix__item {
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin-bottom: 7px;
+    @include br(50%);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.menu-fix__link {
+    width: 6px;
+    height: 6px;
+    @include br(50%);
+    background: $whiteText;
+    display: block;
+    transform: translate(3px, 3px);
+}
+
+
+.menu-fix__item:hover {
+    width: 14px;
+    height: 14px;
+    border: 1px solid $whiteText;
+    @include br(50%);
+}
+
+
+.menu-fix__item.active {
+    width: 14px;
+    height: 14px;
+    border: 1px solid $whiteText;
+    @include br(50%);
+}
+
